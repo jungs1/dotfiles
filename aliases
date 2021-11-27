@@ -1,1 +1,2 @@
-alias ls='ls -lAFh'
+alias ls='exa -laFh --git'
+alias cat='bat'
