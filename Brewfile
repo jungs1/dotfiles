@@ -5,6 +5,8 @@ tap "homebrew/core"
 brew "bat"
 # Modern replacement for 'ls'
 brew "exa"
+# Mac App Store command-line interface
+brew "mas"
 # Application launcher and productivity software
 cask "alfred"
 # Web browser
@@ -15,3 +17,4 @@ cask "iterm2"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
+mas "Bitwarden", id: 1352778147
