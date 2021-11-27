@@ -1,0 +1,11 @@
+[user]
+        name = Steven Jung
+        email = 37044660+jungs1@users.noreply.github.com 
+[pull]
+        rebase=false
+[merge]
+        ff = only
+[init]
+        defaultBranch = main
+[core]
+        autocrlf = input
