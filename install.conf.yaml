@@ -14,3 +14,7 @@
      command: ./setup_homebrew.sh
      stdout: true
      stderr: true
+    -
+     command: ./zsh_settings.sh
+     stdout: true
+     stderr: true
