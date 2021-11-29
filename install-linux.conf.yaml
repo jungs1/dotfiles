@@ -6,7 +6,7 @@
 
 - link:
     ~/.zshrc: linux/zshrc
-    ~/.gitconfig: gitconfig
+    ~/.gitconfig: shared/gitconfig
     ~/.aliases: linux/aliases
    
 - shell:
