@@ -5,16 +5,16 @@
 - clean: ["~"]
 
 - link:
-    ~/.zshrc: zshrc
+    ~/.zshrc: mac/zshrc
     ~/.gitconfig: gitconfig
-    ~/.aliases: aliases
+    ~/.aliases: mac/aliases
    
 - shell:
     -
-     command: ./setup_homebrew.sh
+     command: mac/setup_homebrew.sh
      stdout: true
      stderr: true
     -
-     command: ./zsh_settings.sh
+     command: mac/zsh_settings.sh
      stdout: true
      stderr: true

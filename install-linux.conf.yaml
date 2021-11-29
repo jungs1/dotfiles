@@ -1,0 +1,20 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ["~"]
+
+- link:
+    ~/.zshrc: linux/zshrc
+    ~/.gitconfig: gitconfig
+    ~/.aliases: linux/aliases
+   
+- shell:
+    -
+     command: linux/setup.sh
+     stdout: true
+     stderr: true
+    -
+     command: linux/zsh_settings.sh
+     stdout: true
+     stderr: true
