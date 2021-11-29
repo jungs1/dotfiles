@@ -5,6 +5,8 @@ tap "homebrew/core"
 brew "bat"
 # Modern replacement for 'ls'
 brew "exa"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # Mac App Store command-line interface
 brew "mas"
 # Fast, highly customisable system info script
