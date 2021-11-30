@@ -3,4 +3,4 @@
 echo "\n<<< Starting Homebrew Setup >>>\n"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew bundle --verbose
+brew bundle --file=mac/Brewfile --verbose

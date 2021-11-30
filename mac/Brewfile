@@ -19,8 +19,12 @@ brew "pyenv-virtualenv"
 brew "spaceship"
 # Tool for creating isolated virtual python environments
 brew "virtualenv"
+# Internet file retriever
+brew "wget"
 # Application launcher and productivity software
 cask "alfred"
+# Multi-track audio editor and recorder
+cask "audacity"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Web browser
