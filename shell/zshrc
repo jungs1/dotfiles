@@ -1,0 +1,37 @@
+# Prompt
+PROMPT='%B%F{214}%~ %# '
+
+source $HOME/.aliases
+
+# zsh plugins
+source $HOME/.zsh_settings/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh_settings/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Disable quarantine on brew cask install
+export HOMEBREW_CASK_OPTS="--no-quarantine"
+
+# Syntax highligthing for man pages using bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# pyenv
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+
+# Load nvm
+if [ -e "$HOME/.nvm" ]; then
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+
+# Load pyenv
+if [ -e "$HOME/.pyenv" ]; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv init --path)"
+  if [ -e "$HOME/.pyenv/plugins/pyenv-virtualenv" ]; then
+    eval "$(pyenv virtualenv-init -)"
+  fi
+fi

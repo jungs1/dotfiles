@@ -6,3 +6,15 @@ cd ~/.zsh_settings/fonts
 ./install.sh
 cd ..
 rm -rf fonts
+
+
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
+nvmrc=~/.nvm/nvm.sh
+if [ -e $nvmrc ]; then
+  source $nvmrc
+  nvm install --lts
+fi
+
+curl https://pyenv.run | bash

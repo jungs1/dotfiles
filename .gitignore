@@ -1,2 +1,3 @@
 mac/Brewfile.lock.json
 venv
+.DS_Store
