@@ -18,3 +18,12 @@ if [ -e $nvmrc ]; then
 fi
 
 curl https://pyenv.run | bash
+
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p $HOME/miniconda
+
+minicondarc=~/miniconda/etc/profile.d/conda.sh
+if [ -e $minicondarc ]; then
+  source $minicondarc
+  conda config --set auto_activate_base false
+fi

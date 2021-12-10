@@ -13,6 +13,6 @@
     - command: setup/mac/brew.sh
       stdout: true
       stderr: true
-    - command: setup/zsh.sh
+    - command: setup/setup.sh
       stdout: true
       stderr: true

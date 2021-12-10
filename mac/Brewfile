@@ -1,12 +1,20 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+# Automatic configure script builder
+brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Cross-platform make
+brew "cmake"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # Modern replacement for 'ls'
 brew "exa"
+# Generic library support script
+brew "libtool"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Improved top (interactive process viewer)
@@ -27,15 +35,16 @@ cask "audacity"
 cask "docker"
 # Web browser
 cask "google-chrome"
-# Terminal emulator as alternative to Apple's Terminal app
-cask "iterm2"
 # App to write, plan, collaborate, and get organized
 cask "notion"
 # Team communication and collaboration software
 cask "slack"
+# Terminal emulator, SSH and serial client
+cask "tabby"
 # Open-source code editor
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
 mas "Bitwarden", id: 1352778147
 mas "Magnet", id: 441258766
+mas "Xcode", id: 497799835
