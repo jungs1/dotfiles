@@ -8,6 +8,7 @@
     ~/.zshrc: shell/zshrc
     ~/.gitconfig: gitconfig
     ~/.aliases: shell/aliases
+    ~/.zprofile: shell/zprofile
 
 - shell:
     - command: setup/mac/brew.sh

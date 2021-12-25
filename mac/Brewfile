@@ -23,6 +23,8 @@ brew "htop"
 brew "mas"
 # Fast, highly customisable system info script
 brew "neofetch"
+# Python version management
+brew "pyenv"
 # Tool for creating isolated virtual python environments
 brew "virtualenv"
 # Internet file retriever
@@ -31,20 +33,29 @@ brew "wget"
 cask "alfred"
 # Multi-track audio editor and recorder
 cask "audacity"
+# Web browser focusing on privacy
+cask "brave-browser"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Personal blockchain for Ethereum development
+cask "ganache"
 # Web browser
 cask "google-chrome"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
 # App to write, plan, collaborate, and get organized
 cask "notion"
 # Team communication and collaboration software
 cask "slack"
-# Terminal emulator, SSH and serial client
-cask "tabby"
 # Open-source code editor
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
 mas "Bitwarden", id: 1352778147
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
