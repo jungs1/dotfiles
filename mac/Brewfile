@@ -23,6 +23,8 @@ brew "htop"
 brew "mas"
 # Fast, highly customisable system info script
 brew "neofetch"
+# Python dependency management tool
+brew "pipenv"
 # Python version management
 brew "pyenv"
 # Tool for creating isolated virtual python environments
@@ -45,6 +47,8 @@ cask "google-chrome"
 cask "iterm2"
 # App to write, plan, collaborate, and get organized
 cask "notion"
+# Collaboration platform for API development
+cask "postman"
 # Team communication and collaboration software
 cask "slack"
 # Open-source code editor
@@ -56,6 +60,4 @@ mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
