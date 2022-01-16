@@ -1,14 +1,3 @@
-# git clone git@github.com:zsh-users/zsh-autosuggestions.git ~/.zsh_settings/zsh-autosuggestions
-# git clone git@github.com:zsh-users/zsh-syntax-highlighting.git ~/.zsh_settings/zsh-syntax-highlighting
-# git clone https://github.com/powerline/fonts.git --depth=1 ~/.zsh_settings/fonts
-
-# cd ~/.zsh_settings/fonts
-# ./install.sh
-# cd ..
-# rm -rf fonts
-
-
-
 # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
 # nvmrc=~/.nvm/nvm.sh
@@ -17,3 +6,6 @@
 #   nvm install --lts
 # fi
 
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
