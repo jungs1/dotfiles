@@ -6,6 +6,7 @@
 
 - link:
     ~/.zshrc: shell/zshrc
+    ~/.zshenv: shell/zshenv
     ~/.gitconfig: gitconfig
     ~/.aliases: shell/aliases
     ~/.zprofile: shell/zprofile
@@ -14,10 +15,10 @@
       path: config 
 
 
-# - shell:
-#     - command: setup/mac/brew.sh
-#       stdout: true
-#       stderr: true
-#     - command: setup/setup.sh
-#       stdout: true
-#       stderr: true
+- shell:
+    - command: setup/mac/setup_brew.sh
+      stdout: true
+      stderr: true
+    - command: setup/mac/setup_nvm.sh
+      stdout: true
+      stderr: true
