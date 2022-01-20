@@ -9,11 +9,15 @@
     ~/.gitconfig: gitconfig
     ~/.aliases: shell/aliases
     ~/.zprofile: shell/zprofile
+    ~/.config:
+      create: true
+      path: config 
 
-- shell:
-    - command: setup/mac/brew.sh
-      stdout: true
-      stderr: true
-    - command: setup/setup.sh
-      stdout: true
-      stderr: true
+
+# - shell:
+#     - command: setup/mac/brew.sh
+#       stdout: true
+#       stderr: true
+#     - command: setup/setup.sh
+#       stdout: true
+#       stderr: true
