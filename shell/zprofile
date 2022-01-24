@@ -1,1 +1,4 @@
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ `uname -m` == 'arm64' ]]; then
+    echo M1
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi

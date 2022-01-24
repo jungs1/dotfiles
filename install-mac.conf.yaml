@@ -16,9 +16,9 @@
 
 
 - shell:
-    - command: setup/mac/setup_brew.sh
+    - command: setup/mac/brew.sh
       stdout: true
       stderr: true
-    - command: setup/mac/setup_nvm.sh
+    - command: setup/mac/nvm.sh
       stdout: true
       stderr: true
