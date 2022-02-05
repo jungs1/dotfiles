@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+    transmission-openvpn:
+        restart: always
+        cap_add:
+            - NET_ADMIN
+        volumes:
+            - /media/nuclear/torrents:/data
+        environment:
+            - OPENVPN_PROVIDER=
+            - OPENVPN_USERNAME=
+            - OPENVPN_PASSWORD=
+            - NORDVPN_COUNTRY=
+            - NORDVPN_PROTOCOL=udp
+            - NORDVPN_CATEGORY=legacy_p2p
+            - LOCAL_NETWORK=192.168.0.0/16
+            - TRANSMISSION_RPC_USERNAME=
+            - TRANSMISSION_RPC_PASSWORD=
+            - TRANSMISSION_RPC_AUTHENTICATION_REQUIRED=true
+            - TRANSMISSION_WATCH_DIR_ENABLED=true
+            - TRANSMISSION_TRASH_ORIGINAL_TORRENT_FILES=true
+            - TRANSMISSION_START_ADDED_TORRENTS=true
+            - PUID=
+            - PGID=
+        logging:
+            driver: json-file
+            options:
+                max-size: 10m
+        ports:
+            - 9091:9091
+        dns:
+            - 8.8.8.8
+            - 8.8.4.4
+        image: haugene/transmission-openvpn
