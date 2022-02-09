@@ -71,6 +71,8 @@ cask "notion"
 cask "postman"
 # Team communication and collaboration software
 cask "slack"
+# GUI for the Neovim text editor
+cask "vimr"
 # Open-source code editor
 cask "visual-studio-code"
 # Multimedia player
