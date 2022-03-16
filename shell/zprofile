@@ -1,3 +1,5 @@
+echo 'Echo from .zprofile'
+
 if [[ `uname -m` == 'arm64' ]]; then
     echo M1
     eval "$(/opt/homebrew/bin/brew shellenv)"

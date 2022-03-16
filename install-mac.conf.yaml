@@ -6,11 +6,11 @@
 
 - link:
     ~/.zshrc: shell/zshrc
-    # ~/.p10k.zsh: shell/p10k
     ~/.zshenv: shell/zshenv
-    ~/.gitconfig: gitconfig
     ~/.aliases: shell/aliases
     ~/.zprofile: shell/zprofile
+    ~/.theme: shell/theme
+    ~/.gitconfig: gitconfig
     ~/.config:
       create: true
       path: config
