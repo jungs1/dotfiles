@@ -6,17 +6,19 @@
 
 - link:
     ~/.zshrc: shell/zshrc
-    ~/.p10k.zsh: shell/p10k
+    # ~/.p10k.zsh: shell/p10k
     ~/.zshenv: shell/zshenv
     ~/.gitconfig: gitconfig
     ~/.aliases: shell/aliases
     ~/.zprofile: shell/zprofile
     ~/.config:
       create: true
-      path: config 
-
+      path: config
 
 - shell:
+    - command: setup/setup.sh
+      stdout: true
+      stderr: true
     - command: setup/mac/brew.sh
       stdout: true
       stderr: true

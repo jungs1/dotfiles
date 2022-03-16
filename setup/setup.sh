@@ -1,11 +1,16 @@
-# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+#!/usr/bin/env zsh
+echo '\n<<< Starting plugins Setup >>>\n'
 
-# nvmrc=~/.nvm/nvm.sh
-# if [ -e $nvmrc ]; then
-#   source $nvmrc
-#   nvm install --lts
-# fi
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+if [ -d "/Users/swj/.zsh/zsh-autosuggestions" ] 
+then
+    echo "Already installed zsh-autosuggestion!" 
+else
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
+fi
+
+if [ -d "/Users/swj/.zsh/zsh-syntax-highlighting" ] 
+then
+    echo "Already installed zsh-syntax-highlighting!" 
+else
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+fi
