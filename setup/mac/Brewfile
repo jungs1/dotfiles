@@ -43,6 +43,8 @@ brew "neofetch"
 brew "neovim"
 # Python dependency management tool
 brew "pipenv"
+# Object-relational database system
+brew "postgresql"
 # Python version management
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
