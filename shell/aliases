@@ -3,13 +3,11 @@ alias cat='bat'
 alias vim='nvim'
 alias bbd='brew bundle dump --force --describe'
 
-function gitall() {
-    git add .
+function dkrb() {
     if [ "$1" != "" ]
     then
-        git commit -m "$1"
+        docker exec -it "$1" /bin/bash
     else
-        git commit -m update # default commit message is `update`
-    fi # closing statement of if-else block
-    git push origin HEAD
+        echo "docker container needed!"
+    fi 
 }
