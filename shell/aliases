@@ -2,3 +2,14 @@ alias ls='exa -laFh --git'
 alias cat='bat'
 alias vim='nvim'
 alias bbd='brew bundle dump --force --describe'
+
+function gitall() {
+    git add .
+    if [ "$1" != "" ]
+    then
+        git commit -m "$1"
+    else
+        git commit -m update # default commit message is `update`
+    fi # closing statement of if-else block
+    git push origin HEAD
+}
