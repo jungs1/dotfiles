@@ -59,6 +59,8 @@ cask "alfred"
 cask "audacity"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Free and open-source web browser
+cask "chromium"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Personal blockchain for Ethereum development
@@ -71,6 +73,8 @@ cask "iterm2"
 cask "notion"
 # Collaboration platform for API development
 cask "postman"
+# Peer to peer Bitorrent client
+cask "qbittorrent"
 # Team communication and collaboration software
 cask "slack"
 # Open-source code editor
@@ -81,7 +85,6 @@ cask "vlc"
 cask "zoom"
 mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
-mas "Commander One", id: 1035236694
 mas "Magnet", id: 441258766
 mas "NordVPN", id: 905953485
 mas "Thor Launcher", id: 1120999687
