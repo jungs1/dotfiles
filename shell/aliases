@@ -1,6 +1,5 @@
 alias ls='exa -laFh --git'
 alias cat='bat'
-alias vim='nvim'
 alias bbd='brew bundle dump --force --describe'
 alias dkrb1='docker-compose -f docker-compose.dev.yaml build'
 alias dkrup1='docker-compose -f docker-compose.dev.yaml up'
