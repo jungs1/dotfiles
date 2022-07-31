@@ -1,6 +1,11 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zprofile.pre.zsh" ]] && . "$HOME/.fig/shell/zprofile.pre.zsh"
 echo 'Echo from .zprofile'
 
 if [[ `uname -m` == 'arm64' ]]; then
     echo M1
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zprofile.post.zsh" ]] && . "$HOME/.fig/shell/zprofile.post.zsh"
