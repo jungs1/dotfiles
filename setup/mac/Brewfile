@@ -69,16 +69,24 @@ cask "docker"
 cask "ganache"
 # Web browser
 cask "google-chrome"
+# HTTP and GraphQL Client
+cask "insomnia"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# GPU-based terminal emulator
+cask "kitty"
 # App to write, plan, collaborate, and get organized
 cask "notion"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Collaboration platform for API development
 cask "postman"
 # Peer to peer Bitorrent client
 cask "qbittorrent"
 # Team communication and collaboration software
 cask "slack"
+# System monitor for the menu bar
+cask "stats"
 # Open-source code editor
 cask "visual-studio-code"
 # Multimedia player
