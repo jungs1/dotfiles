@@ -1,42 +1,23 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
-# Library and utilities for processing GIFs
-brew "giflib"
-# Image manipulation library
-brew "jpeg", link: true
-# Library for manipulating PNG images
-brew "libpng"
-# Automatic configure script builder
-brew "autoconf"
-# Tool for generating GNU Standards-compliant Makefiles
-brew "automake"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Manage compile and link flags for libraries
-brew "pkg-config"
-# Vector graphics library with cross-device output support
-brew "cairo"
 # Cross-platform make
 brew "cmake"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # Modern replacement for 'ls'
 brew "exa"
-# Generic library support script
-brew "libtool"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Improved top (interactive process viewer)
 brew "htop"
-# Framework for layout and rendering of i18n text
-brew "pango"
-# Library to render SVG files using Cairo
-brew "librsvg"
 # Mac App Store command-line interface
 brew "mas"
 # Fast, highly customisable system info script
@@ -59,40 +40,68 @@ brew "wget"
 cask "alfred"
 # Multi-track audio editor and recorder
 cask "audacity"
-# Web browser focusing on privacy
-cask "brave-browser"
-# Free and open-source web browser
-cask "chromium"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher"
+# Desktop password and login vault
+cask "bitwarden"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Tool to write Fedora images to portable media files
+cask "fedora-media-writer"
+# Reimagine your terminal
+cask "fig"
 # Personal blockchain for Ethereum development
 cask "ganache"
 # Web browser
 cask "google-chrome"
+# Vector graphics editor
+cask "inkscape"
 # HTTP and GraphQL Client
 cask "insomnia"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-# GPU-based terminal emulator
-cask "kitty"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
+# Note taking and to-do application with synchronization capabilities
+cask "joplin"
+# Wallet desktop application to maintain multiple cryptocurrencies
+cask "ledger-live"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
+# Minimal installer for conda
+cask "miniconda"
+# VPN client for secure internet access and private browsing
+cask "nordvpn"
 # App to write, plan, collaborate, and get organized
 cask "notion"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
-# Collaboration platform for API development
-cask "postman"
+# Open-source software for live streaming and screen recording
+cask "obs"
+# Desktop virtualization software
+cask "parallels"
+# Administration and development platform for PostgreSQL
+cask "pgadmin4"
 # Peer to peer Bitorrent client
 cask "qbittorrent"
+# Imaging utility to install operating systems to a microSD card
+cask "raspberry-pi-imager"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
 # Team communication and collaboration software
 cask "slack"
+# Graphical client for Git version control
+cask "sourcetree"
 # System monitor for the menu bar
 cask "stats"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin11"
+# File transfer application
+cask "transmit"
 # Open-source code editor
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
+# Network protocol analyzer
+cask "wireshark"
 # Video communication and virtual meeting platform
 cask "zoom"
-mas "Bitwarden", id: 1352778147
-mas "NordVPN", id: 905953485
 mas "Xcode", id: 497799835
