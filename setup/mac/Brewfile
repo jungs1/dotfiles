@@ -6,7 +6,7 @@ tap "koekeishiya/formulae"
 # Library and utilities for processing GIFs
 brew "giflib"
 # Image manipulation library
-brew "jpeg"
+brew "jpeg", link: true
 # Library for manipulating PNG images
 brew "libpng"
 # Automatic configure script builder
@@ -44,7 +44,7 @@ brew "neofetch"
 # Python dependency management tool
 brew "pipenv"
 # Object-relational database system
-brew "postgresql", restart_service: true
+brew "postgresql@14"
 # Python version management
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
@@ -93,9 +93,6 @@ cask "visual-studio-code"
 cask "vlc"
 # Video communication and virtual meeting platform
 cask "zoom"
-mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
-mas "Magnet", id: 441258766
 mas "NordVPN", id: 905953485
-mas "Thor Launcher", id: 1120999687
 mas "Xcode", id: 497799835
