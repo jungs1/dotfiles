@@ -3,7 +3,6 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "koekeishiya/formulae"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Cross-platform make
@@ -50,6 +49,8 @@ cask "docker"
 cask "fedora-media-writer"
 # Reimagine your terminal
 cask "fig"
+# Web browser
+cask "firefox"
 # Personal blockchain for Ethereum development
 cask "ganache"
 # Web browser
@@ -104,4 +105,3 @@ cask "vlc"
 cask "wireshark"
 # Video communication and virtual meeting platform
 cask "zoom"
-mas "Xcode", id: 497799835
