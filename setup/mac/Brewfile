@@ -35,6 +35,8 @@ brew "vim"
 brew "virtualenv"
 # Internet file retriever
 brew "wget"
+# Download YouTube videos from the command-line
+brew "youtube-dl"
 # Application launcher and productivity software
 cask "alfred"
 # Multi-track audio editor and recorder
@@ -43,6 +45,8 @@ cask "audacity"
 cask "balenaetcher"
 # Desktop password and login vault
 cask "bitwarden"
+# 3D creation suite
+cask "blender"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Tool to write Fedora images to portable media files
