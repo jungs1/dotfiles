@@ -3,6 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "mongodb/brew"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Cross-platform make
@@ -19,16 +20,20 @@ brew "go"
 brew "htop"
 # Mac App Store command-line interface
 brew "mas"
+# MongoDB Shell to connect, configure, query, and work with your MongoDB database
+brew "mongosh"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Python dependency management tool
 brew "pipenv"
 # Object-relational database system
-brew "postgresql@14"
+brew "postgresql@14", restart_service: true
 # Python version management
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
+# Persistent key-value database, with built-in net interface
+brew "redis", restart_service: true
 # Vi 'workalike' with many additional features
 brew "vim"
 # Tool for creating isolated virtual python environments
@@ -37,8 +42,12 @@ brew "virtualenv"
 brew "wget"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community"
 # Application launcher and productivity software
 cask "alfred"
+# Memory training application
+cask "anki"
 # Multi-track audio editor and recorder
 cask "audacity"
 # Tool to flash OS images to SD cards & USB drives
