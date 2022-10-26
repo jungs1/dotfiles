@@ -28,6 +28,8 @@ brew "minikube"
 brew "mongosh"
 # Fast, highly customisable system info script
 brew "neofetch"
+# Command-line interface for SQLite
+brew "sqlite"
 # Python dependency management tool
 brew "pipenv"
 # Object-relational database system
@@ -72,12 +74,12 @@ cask "firefox"
 cask "ganache"
 # Web browser
 cask "google-chrome"
+# Terminal built on web technologies
+cask "hyper"
 # Vector graphics editor
 cask "inkscape"
 # HTTP and GraphQL Client
 cask "insomnia"
-# Terminal emulator as alternative to Apple's Terminal app
-cask "iterm2"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
 # Note taking and to-do application with synchronization capabilities
@@ -94,6 +96,8 @@ cask "nordvpn"
 cask "notion"
 # Open-source software for live streaming and screen recording
 cask "obs"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Desktop virtualization software
 cask "parallels"
 # Administration and development platform for PostgreSQL
