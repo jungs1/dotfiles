@@ -3,3 +3,4 @@
     source venv/bin/activate
     ./install-mac
 ```
+brew bundle --file=~/Brewfile

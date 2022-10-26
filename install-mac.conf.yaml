@@ -12,6 +12,7 @@
     ~/.zprofile: shell/zprofile
     ~/.theme: shell/theme
     ~/.gitconfig: gitconfig
+    ~/.hyper.js: config/.hyper.js
     # ~/.config:
     #   create: true
     #   path: config
