@@ -28,10 +28,12 @@ brew "minikube"
 brew "mongosh"
 # Fast, highly customisable system info script
 brew "neofetch"
-# Command-line interface for SQLite
-brew "sqlite"
 # Python dependency management tool
 brew "pipenv"
+# Tool for creating isolated virtual python environments
+brew "virtualenv"
+# Python package management tool
+brew "poetry"
 # Object-relational database system
 brew "postgresql@14", restart_service: true
 # Python version management
@@ -40,14 +42,16 @@ brew "pyenv"
 brew "pyenv-virtualenv"
 # Persistent key-value database, with built-in net interface
 brew "redis", restart_service: true
+# Command-line interface for https://speedtest.net bandwidth tests
+brew "speedtest-cli"
 # Vi 'workalike' with many additional features
 brew "vim"
-# Tool for creating isolated virtual python environments
-brew "virtualenv"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
 # Internet file retriever
 brew "wget"
-# Download YouTube videos from the command-line
-brew "youtube-dl"
+# Fork of youtube-dl with additional features and fixes
+brew "yt-dlp"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
 # Application launcher and productivity software
@@ -72,8 +76,6 @@ cask "fig"
 cask "firefox"
 # Personal blockchain for Ethereum development
 cask "ganache"
-# Web browser
-cask "google-chrome"
 # Terminal built on web technologies
 cask "hyper"
 # Vector graphics editor
@@ -82,12 +84,8 @@ cask "inkscape"
 cask "insomnia"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
-# Note taking and to-do application with synchronization capabilities
-cask "joplin"
 # Wallet desktop application to maintain multiple cryptocurrencies
 cask "ledger-live"
-# Meet, chat, call, and collaborate in just one place
-cask "microsoft-teams"
 # Minimal installer for conda
 cask "miniconda"
 # VPN client for secure internet access and private browsing
@@ -98,8 +96,6 @@ cask "notion"
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# Desktop virtualization software
-cask "parallels"
 # Administration and development platform for PostgreSQL
 cask "pgadmin4"
 # Peer to peer Bitorrent client
@@ -110,8 +106,6 @@ cask "raspberry-pi-imager"
 cask "rectangle"
 # Team communication and collaboration software
 cask "slack"
-# Graphical client for Git version control
-cask "sourcetree"
 # System monitor for the menu bar
 cask "stats"
 # JDK from the Eclipse Foundation (Adoptium)
@@ -126,5 +120,5 @@ cask "vlc"
 cask "wireshark"
 # Video communication and virtual meeting platform
 cask "zoom"
+mas "Amphetamine", id: 937984704
 mas "Focus To-Do", id: 1258530160
-mas "Xcode", id: 497799835
