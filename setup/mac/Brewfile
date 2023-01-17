@@ -42,8 +42,6 @@ brew "postgresql@14", restart_service: true
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
-# Persistent key-value database, with built-in net interface
-brew "redis", restart_service: true
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
 # Vi 'workalike' with many additional features
@@ -110,8 +108,6 @@ cask "raspberry-pi-imager"
 cask "rectangle"
 # Team communication and collaboration software
 cask "slack"
-# System monitor for the menu bar
-cask "stats"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin11"
 # File transfer application
@@ -123,3 +119,5 @@ cask "vlc"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "Amphetamine", id: 937984704
+mas "KakaoTalk", id: 869223134
+mas "Keynote", id: 409183694
