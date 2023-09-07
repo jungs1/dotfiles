@@ -1,10 +1,8 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
-tap "mongodb/brew"
-tap "pieces-app/pieces"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Interpreted, interactive, object-oriented programming language
@@ -27,38 +25,22 @@ brew "kubernetes-cli"
 brew "mas"
 # Run a Kubernetes cluster locally
 brew "minikube"
-# MongoDB Shell to connect, configure, query, and work with your MongoDB database
-brew "mongosh"
-# Fast, highly customisable system info script
-brew "neofetch"
 # Python dependency management tool
 brew "pipenv"
 # Fast, disk space efficient package manager
 brew "pnpm"
-# Tool for creating isolated virtual python environments
-brew "virtualenv"
-# Python package management tool
-brew "poetry"
-# Object-relational database system
-brew "postgresql@14", restart_service: true
 # Python version management
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
-# Command-line interface for https://speedtest.net bandwidth tests
-brew "speedtest-cli"
 # Vi 'workalike' with many additional features
 brew "vim"
-# Executes a program periodically, showing output fullscreen
-brew "watch"
+# Tool for creating isolated virtual python environments
+brew "virtualenv"
 # Internet file retriever
 brew "wget"
 # Fork of youtube-dl with additional features and fixes
 brew "yt-dlp"
-# High-performance, schema-free, document-oriented database
-brew "mongodb/brew/mongodb-community"
-# A command line application for Pieces
-brew "pieces-app/pieces/pieces"
 # Application launcher and productivity software
 cask "alfred"
 # Memory training application
@@ -67,16 +49,12 @@ cask "anki"
 cask "audacity"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
-# Desktop password and login vault
-cask "bitwarden"
 # Calendar for professionals and teams
 cask "cron"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
-# Text editor
-cask "emacs"
 # Reimagine your terminal
 cask "fig"
 # Collaborative team software
@@ -105,14 +83,12 @@ cask "kindle"
 cask "ledger-live"
 # Free cross-platform office suite, fresh version
 cask "libreoffice"
-# Web browser
-cask "microsoft-edge"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
 # Minimal installer for conda
 cask "miniconda"
-# Online collaborative whiteboard platform
-cask "miro"
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
 # VPN client for secure internet access and private browsing
 cask "nordvpn"
 # App to write, plan, collaborate, and get organized
@@ -121,12 +97,16 @@ cask "notion"
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Desktop virtualization software
+cask "parallels"
 # Administration and development platform for PostgreSQL
 cask "pgadmin4"
+# Bridges Proton Mail to email clients supporting IMAP and SMTP protocols
+cask "protonmail-bridge"
 # Peer to peer Bitorrent client
 cask "qbittorrent"
-# Imaging utility to install operating systems to a microSD card
-cask "raspberry-pi-imager"
+# Modern programming language in the Lisp/Scheme family
+cask "racket"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Team communication and collaboration software
@@ -134,7 +114,7 @@ cask "slack"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # JDK from the Eclipse Foundation (Adoptium)
-cask "temurin11"
+cask "temurin"
 # Customizable email client
 cask "thunderbird"
 # File transfer application
@@ -145,18 +125,24 @@ cask "visual-studio-code"
 cask "vlc"
 # Video communication and virtual meeting platform
 cask "zoom"
+# Collect, organize, cite, and share research sources
+cask "zotero"
 mas "Amphetamine", id: 937984704
-mas "Bitwarden", id: 1352778147
 mas "KakaoTalk", id: 869223134
 mas "Keynote", id: 409183694
+vscode "Andes.racket-repl"
 vscode "bradlc.vscode-tailwindcss"
 vscode "dbaeumer.vscode-eslint"
 vscode "esbenp.prettier-vscode"
+vscode "evzen-wybitul.magic-racket"
 vscode "figma.figma-vscode-extension"
 vscode "GitHub.copilot"
 vscode "GitHub.copilot-labs"
 vscode "GitHub.vscode-pull-request-github"
 vscode "mhutchie.git-graph"
+vscode "ms-python.black-formatter"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
 vscode "Prisma.prisma"
 vscode "withfig.fig"
 vscode "yzhang.markdown-all-in-one"
