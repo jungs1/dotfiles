@@ -1,11 +1,11 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-echo 'Echo from .zshrc'
 source $HOME/.aliases
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.theme
-
+# LLVM
+export PATH="/opt/homebrew/opt/llvm@14/bin:$PATH"
 # Go
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
@@ -46,5 +46,8 @@ unset __conda_setup
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+export PATH="/Users/swj/.vscode-dotnet-sdk/.dotnet:$PATH"
