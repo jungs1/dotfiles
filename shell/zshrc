@@ -1,11 +1,16 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 source $HOME/.aliases
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.theme
+
+# chruby
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+
 # LLVM
 export PATH="/opt/homebrew/opt/llvm@14/bin:$PATH"
+
+# set default llvm@13 as default
 # Go
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
@@ -48,6 +53,12 @@ unset __conda_setup
 
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 export PATH="/Users/swj/.vscode-dotnet-sdk/.dotnet:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/swj/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

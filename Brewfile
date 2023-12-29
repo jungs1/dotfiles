@@ -1,31 +1,62 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
+tap "lencx/chatgpt", "https://github.com/lencx/ChatGPT.git"
 tap "lencx/nofwl"
 # Zstandard is a real-time compression algorithm
 brew "zstd"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Parser generator
+brew "bison"
+# Collection of portable C++ source libraries
+brew "boost"
+# Manage compile and link flags for libraries
+brew "pkg-config"
+# Ruby environment tool
+brew "chruby"
 # Cross-platform make
 brew "cmake"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# Modern replacement for 'ls'
-brew "exa"
+# Modern, maintained replacement for ls
+brew "eza"
+# Asynchronous event library
+brew "libevent"
+# High-performance, asynchronous messaging library
+brew "zeromq"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
+# GNU database manager
+brew "gdbm"
 # Distributed revision control system
 brew "git"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Generic library support script
+brew "libtool"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# Library for command-line editing
+brew "readline"
 # Improved top (interactive process viewer)
 brew "htop"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
-# Next-gen compiler infrastructure
-brew "llvm@13"
+# Portable Foreign Function Interface library
+brew "libffi"
+# NAT port mapping protocol library
+brew "libnatpmp"
+# YAML Parser
+brew "libyaml"
 # Run a Kubernetes cluster locally
 brew "minikube"
+# UPnP IGD client library and daemon
+brew "miniupnpc"
 # Command-line interface for SQLite
 brew "sqlite"
 # Tool for creating isolated virtual python environments
@@ -40,6 +71,12 @@ brew "pyenv"
 brew "pyenv-virtualenv"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
+# QR Code generation
+brew "qrencode"
+# Cross-platform application and UI framework
+brew "qt@5"
+# Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
+brew "ruby-install"
 # Contract-oriented programming language
 brew "solidity"
 # Extraction utility for .zip compressed archives
@@ -52,22 +89,24 @@ brew "wget"
 brew "yarn"
 # Fork of youtube-dl with additional features and fixes
 brew "yt-dlp"
+# High-performance theorem prover
+brew "z3"
 # Application launcher and productivity software
 cask "alfred"
 # Memory training application
 cask "anki"
+# Desktop wrapper for OpenAI ChatGPT
+cask "chatgpt"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Developer platform
 cask "dotnet-sdk"
-# Reimagine your terminal
-cask "fig"
 # Collaborative team software
 cask "figma"
 # Web browser
 cask "firefox"
-# Web browser
-cask "google-chrome"
+# Personal blockchain for Ethereum development
+cask "ganache"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
 # HTTP and GraphQL Client
@@ -86,10 +125,6 @@ cask "libreoffice"
 cask "miniconda"
 # Interactive tool for analyzing MongoDB data
 cask "mongodb-compass"
-# Open source implementation of Microsoft's .NET Framework
-cask "mono-mdk-for-visual-studio"
-# Developer IDE or Management Environment for Neo4j instances
-cask "neo4j"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # Knowledge base that works on top of a local folder of plain text Markdown files
@@ -98,6 +133,8 @@ cask "obsidian"
 cask "parallels"
 # Administration and development platform for PostgreSQL
 cask "pgadmin4"
+# Browse, manage, inspect containers and images
+cask "podman-desktop"
 # Bridges Proton Mail to email clients supporting IMAP and SMTP protocols
 cask "protonmail-bridge"
 # VPN client focusing on security
@@ -108,20 +145,18 @@ cask "qbittorrent"
 cask "racket"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
-# Team communication and collaboration software
-cask "slack"
 # Terminal emulator, SSH and serial client
 cask "tabby"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin19"
 # Customizable email client
 cask "thunderbird"
 # File transfer application
 cask "transmit"
-# Integrated development environment
-cask "visual-studio"
 # Open-source code editor
 cask "visual-studio-code"
 # Multimedia player
@@ -145,17 +180,16 @@ vscode "dbaeumer.vscode-eslint"
 vscode "dsznajder.es7-react-js-snippets"
 vscode "esbenp.prettier-vscode"
 vscode "evzen-wybitul.magic-racket"
+vscode "ginfuru.ginfuru-vscode-jekyll-syntax"
 vscode "GitHub.copilot"
 vscode "GitHub.copilot-chat"
-vscode "GitHub.copilot-labs"
-vscode "GitHub.github-vscode-theme"
 vscode "GitHub.remotehub"
 vscode "GitHub.vscode-pull-request-github"
+vscode "jebbs.plantuml"
 vscode "josefpihrt-vscode.roslynator"
 vscode "JuanBlanco.solidity"
-vscode "karyfoundation.racket"
+vscode "kargware.vscode-extension-jekyll-kw"
 vscode "lishizhen.racket-fmt"
-vscode "mechatroner.rainbow-csv"
 vscode "mhutchie.git-graph"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-dotnettools.csdevkit"
@@ -187,7 +221,15 @@ vscode "PKief.material-icon-theme"
 vscode "Prisma.prisma"
 vscode "redhat.java"
 vscode "redhat.vscode-yaml"
+vscode "shd101wyy.markdown-preview-enhanced"
 vscode "Symflower.symflower"
+vscode "tamasfe.even-better-toml"
+vscode "tintinweb.graphviz-interactive-preview"
+vscode "tintinweb.solidity-visual-auditor"
+vscode "tintinweb.vscode-ethover"
+vscode "tintinweb.vscode-inline-bookmarks"
+vscode "tintinweb.vscode-solidity-flattener"
+vscode "tintinweb.vscode-solidity-language"
 vscode "tomoki1207.pdf"
 vscode "twxs.cmake"
 vscode "VisualStudioExptTeam.intellicode-api-usage-examples"
@@ -198,5 +240,4 @@ vscode "vscjava.vscode-java-pack"
 vscode "vscjava.vscode-java-test"
 vscode "vscjava.vscode-maven"
 vscode "vscodevim.vim"
-vscode "withfig.fig"
-vscode "yzhang.markdown-all-in-one"
+vscode "zhuangtongfa.material-theme"

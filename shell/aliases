@@ -1,4 +1,4 @@
-alias ls='exa -laFh --git'
+alias ls='eza -laFh --git'
 alias cat='bat'
 alias bbd='brew bundle dump --force --describe'
 alias dkrb1='docker-compose -f docker-compose.dev.yaml build'
