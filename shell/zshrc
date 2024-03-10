@@ -3,22 +3,13 @@ source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.theme
 
-# chruby
+# ruby
+ 
 source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-
-# LLVM
-export PATH="/opt/homebrew/opt/llvm@14/bin:$PATH"
-
-# set default llvm@13 as default
-# Go
-export GOPATH="$HOME/go"
-export PATH="$GOPATH/bin:$PATH"
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh   
 
 # Disable quarantine on brew cask install
 export HOMEBREW_CASK_OPTS="--no-quarantine"
-# Syntax highligthing for man pages using bat
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Load nvm
 export NVM_DIR="$HOME/.nvm"
@@ -26,13 +17,14 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Load pyenv
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
+
+# pnpm
+export PNPM_HOME="/Users/taikorind/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -49,16 +41,3 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-
-export PATH="/Users/swj/.vscode-dotnet-sdk/.dotnet:$PATH"
-
-# pnpm
-export PNPM_HOME="/Users/swj/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end

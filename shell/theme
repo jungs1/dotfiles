@@ -7,32 +7,35 @@ function parse_git_branch () {
 
 () {
   local PR_USER PR_USER_OP PR_PROMPT PR_HOST
+  local hostname=$(hostname | cut -d '.' -f 1)
 
   # Check the UID
   if [[ $UID -ne 0 ]]; then # normal user
-    PR_USER='%F{green}%n%f'
-    PR_USER_OP='%F{green}%#%f'
+    PR_USER='%F{70}%n%f' # Light green
+    PR_USER_OP='%F{70}%#%f' # Light green
     PR_PROMPT='%f➤ %f'
-    PR_HOST='%F{green}%M%f'
+    PR_HOST="%F{78}${hostname}%f" # Soft cyan, using the modified hostname
   else # root
-    PR_USER='%F{red}%n%f'
-    PR_USER_OP='%F{red}%#%f'
-    PR_PROMPT='%F{red}➤ %f'
-    PR_HOST='%F{red}%M%f'
+    PR_USER='%F{124}%n%f' # Soft red
+    PR_USER_OP='%F{124}%#%f' # Soft red
+    PR_PROMPT='%F{124}➤ %f' # Soft red
+    PR_HOST="%F{124}${hostname}%f" # Soft red, using the modified hostname
   fi
 
-  local return_code="%(?..%F{red}%? ↵%f)"
+  local return_code="%(?..%F{160}%? ↵%f)" # Lighter red for errors
 
-  local user_host="${PR_USER}%F{cyan}@${PR_HOST}"
-  local current_dir="%B%F{blue}%~%f%b"
+  local user_host="${PR_USER}%F{145}@${PR_HOST}" # Lavender for the '@' symbol
+  local current_dir="%B%F{81}%~%f%b" # A soothing shade of teal for the directory
   local git_branch='$(parse_git_branch)'
 
-  PROMPT="╭─${user_host} ${current_dir} ${git_branch}
-  ╰─$PR_PROMPT "
+  # Use newline and padding for clearer separation and readability
+  PROMPT="╭─${user_host}${current_dir}${git_branch}
+╰─$PR_PROMPT "
   RPROMPT="${return_code}"
 
-  ZSH_THEME_GIT_PROMPT_PREFIX="%F{yellow}‹"
+
+  ZSH_THEME_GIT_PROMPT_PREFIX="%F{143}‹" # Olive green for Git prompt
   ZSH_THEME_GIT_PROMPT_SUFFIX="› %f"
-  ZSH_THEME_RUBY_PROMPT_PREFIX="%F{red}‹"
+  ZSH_THEME_RUBY_PROMPT_PREFIX="%F{161}‹" # A muted magenta for Ruby
   ZSH_THEME_RUBY_PROMPT_SUFFIX="›%f"
 }

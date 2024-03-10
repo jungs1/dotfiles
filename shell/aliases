@@ -1,11 +1,9 @@
-alias ls='eza -laFh --git'
-alias cat='bat'
+alias ls='eza -lah --git'
 alias bbd='brew bundle dump --force --describe'
 alias dkrb1='docker-compose -f docker-compose.dev.yaml build'
 alias dkrup1='docker-compose -f docker-compose.dev.yaml up'
 alias dkrb0='docker-compose -f docker-compose.prod.yaml build'
 alias dkrup0='docker-compose -f docker-compose.prod.yaml up'
-alias openBB='/Applications/OpenBB\ Terminal/OpenBB\ Terminal'
 
 function dkrin() {
     if [ "$1" != "" ]
