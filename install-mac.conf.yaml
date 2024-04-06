@@ -6,16 +6,14 @@
 
 - link:
     ~/.zshrc: shell/zshrc
-    ~/.vimrc: vim/.vimrc
     ~/.zshenv: shell/zshenv
     ~/.aliases: shell/aliases
     ~/.zprofile: shell/zprofile
     ~/.theme: shell/theme
-    ~/.gitconfig: gitconfig
-    ~/.hyper.js: config/.hyper.js
-    # ~/.config:
-    #   create: true
-    #   path: config
+    ~/.gitconfig: git/gitconfig
+    ~/.config:
+      create: true
+      path: config
 
 - shell:
     - command: setup/setup.sh

@@ -12,6 +12,8 @@ brew "eza"
 brew "git"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Improved top (interactive process viewer)
+brew "htop"
 # Mac App Store command-line interface
 brew "mas"
 # Java-based project management
@@ -26,16 +28,22 @@ brew "pyenv-virtualenv"
 brew "ruby-install"
 # Contract-oriented programming language
 brew "solidity"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerised applications and microservices
 cask "docker"
 # Web browser
 cask "firefox"
+# Web browser
+cask "google-chrome"
 # Tool to prevent the system from going into sleep mode
 cask "keepingyouawake"
-# GPU-based terminal emulator
-cask "kitty"
 # Wallet desktop application to maintain multiple cryptocurrencies
 cask "ledger-live"
 # Free cross-platform office suite, fresh version
@@ -85,6 +93,8 @@ vscode "esbenp.prettier-vscode"
 vscode "formulahendry.docker-explorer"
 vscode "gimenete.github-linker"
 vscode "ginfuru.ginfuru-vscode-jekyll-syntax"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "github.remotehub"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
@@ -117,10 +127,10 @@ vscode "njpwerner.autodocstring"
 vscode "pkief.material-icon-theme"
 vscode "prisma.prisma"
 vscode "qwtel.sqlite-viewer"
+vscode "rebornix.scheme"
 vscode "redhat.java"
 vscode "redhat.vscode-yaml"
 vscode "shd101wyy.markdown-preview-enhanced"
-vscode "sourcegraph.cody-ai"
 vscode "tamasfe.even-better-toml"
 vscode "tintinweb.ethereum-security-bundle"
 vscode "tintinweb.graphviz-interactive-preview"
@@ -131,6 +141,7 @@ vscode "tintinweb.vscode-inline-bookmarks"
 vscode "tintinweb.vscode-lll"
 vscode "tintinweb.vscode-solidity-flattener"
 vscode "tintinweb.vscode-solidity-language"
+vscode "tomoki1207.pdf"
 vscode "visualstudioexptteam.intellicode-api-usage-examples"
 vscode "visualstudioexptteam.vscodeintellicode"
 vscode "vscjava.vscode-java-debug"

@@ -11,3 +11,9 @@
         autocrlf = input
 [http]
 	postBuffer = 1048576000
+
+[fetch]
+        prune = true
+
+[alias]
+        empty = "git commit --allow-empty"
