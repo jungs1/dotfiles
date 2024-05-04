@@ -1,3 +1,4 @@
+import = ['~/.config/alacritty/themes/github_dark.toml']
 [window]
 opacity = 0.95
 decorations = "Full"
@@ -7,33 +8,8 @@ decorations_theme_variant = "Light" # "Dark"
 x = 10
 y = 10
 
-
-[colors]
-draw_bold_text_with_bright_colors = true
-
-[colors.bright]
-black = "#625e4c"
-blue = "#9d65ff"
-cyan = "#58d1eb"
-green = "#98e024"
-magenta = "#f4005f"
-red = "#f4005f"
-white = "#f6f6ef"
-yellow = "#e0d561"
-
-[colors.normal]
-black = "#1a1a1a"
-blue = "#9d65ff"
-cyan = "#58d1eb"
-green = "#98e024"
-magenta = "#f4005f"
-red = "#f4005f"
-white = "#c4c5b5"
-yellow = "#fa8419"
-
-[colors.primary]
-background = "0x1a1b26"
-foreground = "0xa9b1d6"
+[font]
+size = 11.0
 
 [env]
 TERM = "xterm-256color"
