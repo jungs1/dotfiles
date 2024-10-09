@@ -5,6 +5,10 @@ alias dkrup1='docker-compose -f docker-compose.dev.yaml up'
 alias dkrb0='docker-compose -f docker-compose.prod.yaml build'
 alias dkrup0='docker-compose -f docker-compose.prod.yaml up'
 
+alias java11='export JAVA_HOME=$JAVA_11_HOME'
+alias java17='export JAVA_HOME=$JAVA_17_HOME'
+alias java21='export JAVA_HOME=$JAVA_21_HOME'
+
 function dkrin() {
     if [ "$1" != "" ]
     then

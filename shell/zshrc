@@ -2,6 +2,9 @@ source $HOME/.aliases
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.theme
+## java
+export JAVA_17_HOME=$(/usr/libexec/java_home -v17)
+export JAVA_21_HOME=$(/usr/libexec/java_home -v21)
 # foundry
 export PATH="$PATH:/Users/taikorind/.foundry/bin"
 

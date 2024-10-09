@@ -5,6 +5,12 @@ function parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
+function parse_virtualenv () {
+  if [[ -n "$VIRTUAL_ENV" ]]; then
+    echo "($(basename $VIRTUAL_ENV)) "
+  fi
+}
+
 () {
   local PR_USER PR_USER_OP PR_PROMPT PR_HOST
   local hostname=$(hostname | cut -d '.' -f 1)
@@ -27,9 +33,10 @@ function parse_git_branch () {
   local user_host="${PR_USER}%F{145}@${PR_HOST}" # Lavender for the '@' symbol
   local current_dir="%B%F{81}%~%f%b" # A soothing shade of teal for the directory
   local git_branch='$(parse_git_branch)'
+  local virtualenv='$(parse_virtualenv)'
 
   # Use newline and padding for clearer separation and readability
-  PROMPT="╭─${user_host}${current_dir}${git_branch}
+  PROMPT="╭─${user_host}${virtualenv}${current_dir}${git_branch}
 ╰─$PR_PROMPT "
   RPROMPT="${return_code}"
 
