@@ -7,3 +7,6 @@
 [filesystem "Eclipse Adoptium|17.0.12|/dev/disk3s1"]
 	timestampResolution = 30000 nanoseconds
 	minRacyThreshold = 0 nanoseconds
+[filesystem "Homebrew|23|/dev/disk3s1"]
+	timestampResolution = 2000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
