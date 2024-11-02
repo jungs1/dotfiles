@@ -1,3 +1,17 @@
+# ~/.zshenv - Environment setup for all shell types
+
+# Utility function to check if a command exists
 function exists() {
-    command -v $1 >/dev/null 2>&1
-} 
+    command -v "$1" >/dev/null 2>&1
+}
+
+# Essential environment variables
+export EDITOR='vim'
+export VISUAL='code'
+export LANG='en_US.UTF-8'
+export LC_ALL='en_US.UTF-8'
+
+# Path modifications (if needed before zshrc)
+if [[ -d "/usr/local/bin" ]]; then
+    export PATH="/usr/local/bin:$PATH"
+fi

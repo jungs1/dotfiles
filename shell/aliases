@@ -1,13 +1,28 @@
+# Aliases
 alias ls='eza -lah --git'
+
+# Homebrew aliases
 alias bbd='brew bundle dump --force --describe'
+
+# Docker aliases
 alias dkrb1='docker-compose -f docker-compose.dev.yaml build'
 alias dkrup1='docker-compose -f docker-compose.dev.yaml up'
 alias dkrb0='docker-compose -f docker-compose.prod.yaml build'
 alias dkrup0='docker-compose -f docker-compose.prod.yaml up'
 
+# Java versions
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
 alias java17='export JAVA_HOME=$JAVA_17_HOME'
 alias java21='export JAVA_HOME=$JAVA_21_HOME'
+
+# Git shortcuts
+alias gs='git status'
+alias gp='git pull'
+alias gpp='git push'
+alias gc='git commit'
+alias gco='git checkout'
+alias gb='git branch'
+
 
 function dkrin() {
     if [ "$1" != "" ]

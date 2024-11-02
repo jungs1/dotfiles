@@ -1,48 +1,61 @@
-# Based on bira theme
+# Enhanced bira theme with git status and decorators
 
 setopt prompt_subst
-function parse_git_branch () {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+
+# Color scheme
+typeset -A colors=(
+    user_normal  "078"   # Softer green
+    user_root    "160"   # Bright red
+    host_normal  "039"   # Royal blue
+    at_symbol    "145"   # Lavender
+    directory    "081"   # Azure
+    git_clean    "114"   # Sage green
+    git_dirty    "167"   # Coral red
+    timestamp    "242"   # Gray
+    symbols      "244"   # Darker gray
+)
+
+# Enhanced git parsing with status
+function parse_git_branch() {
+    local branch=$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+    if [[ -n $branch ]]; then
+        local git_status=$(git status --porcelain 2>/dev/null)
+        if [[ -n $git_status ]]; then
+            echo " %F{$colors[git_dirty]}⎇ ${branch} ✗%f"
+        else
+            echo " %F{$colors[git_clean]}⎇ ${branch} ✓%f"
+        fi
+    fi
 }
 
-function parse_virtualenv () {
-  if [[ -n "$VIRTUAL_ENV" ]]; then
-    echo "($(basename $VIRTUAL_ENV)) "
-  fi
+function parse_virtualenv() {
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+        echo "%F{$colors[directory]}($(basename $VIRTUAL_ENV))%f "
+    fi
 }
 
 () {
-  local PR_USER PR_USER_OP PR_PROMPT PR_HOST
-  local hostname=$(hostname | cut -d '.' -f 1)
+    local hostname=$(hostname | cut -d '.' -f 1)
 
-  # Check the UID
-  if [[ $UID -ne 0 ]]; then # normal user
-    PR_USER='%F{70}%n%f' # Light green
-    PR_USER_OP='%F{70}%#%f' # Light green
-    PR_PROMPT='%f➤ %f'
-    PR_HOST="%F{78}${hostname}%f" # Soft cyan, using the modified hostname
-  else # root
-    PR_USER='%F{124}%n%f' # Soft red
-    PR_USER_OP='%F{124}%#%f' # Soft red
-    PR_PROMPT='%F{124}➤ %f' # Soft red
-    PR_HOST="%F{124}${hostname}%f" # Soft red, using the modified hostname
-  fi
+    # Check the UID
+    if [[ $UID -ne 0 ]]; then
+        PR_USER="%F{$colors[user_normal]}%n%f"
+        PR_PROMPT='%F{$colors[user_normal]}➤%f'
+        PR_HOST="%F{$colors[host_normal]}${hostname}%f"
+    else
+        PR_USER="%F{$colors[user_root]}%n%f"
+        PR_PROMPT='%F{$colors[user_root]}➤%f'
+        PR_HOST="%F{$colors[user_root]}${hostname}%f"
+    fi
 
-  local return_code="%(?..%F{160}%? ↵%f)" # Lighter red for errors
+    local return_code="%(?..%F{$colors[user_root]}%? ↵%f)"
+    local user_host="${PR_USER}%F{$colors[at_symbol]}@%f${PR_HOST}"
+    local current_dir="%B%F{$colors[directory]}%~%f%b"
+    local git_branch='$(parse_git_branch)'
+    local virtualenv='$(parse_virtualenv)'
+    local timestamp="%F{$colors[timestamp]}[%*]%f"
 
-  local user_host="${PR_USER}%F{145}@${PR_HOST}" # Lavender for the '@' symbol
-  local current_dir="%B%F{81}%~%f%b" # A soothing shade of teal for the directory
-  local git_branch='$(parse_git_branch)'
-  local virtualenv='$(parse_virtualenv)'
-
-  # Use newline and padding for clearer separation and readability
-  PROMPT="╭─${user_host}${virtualenv}${current_dir}${git_branch}
+    PROMPT="╭─${user_host} ${virtualenv}${current_dir}${git_branch}
 ╰─$PR_PROMPT "
-  RPROMPT="${return_code}"
-
-
-  ZSH_THEME_GIT_PROMPT_PREFIX="%F{143}‹" # Olive green for Git prompt
-  ZSH_THEME_GIT_PROMPT_SUFFIX="› %f"
-  ZSH_THEME_RUBY_PROMPT_PREFIX="%F{161}‹" # A muted magenta for Ruby
-  ZSH_THEME_RUBY_PROMPT_SUFFIX="›%f"
+    RPROMPT="${return_code} ${timestamp}"
 }

@@ -1,4 +1,21 @@
-if [[ `uname -m` == 'arm64' ]]; then
-    echo M1
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+#!/bin/zsh
+
+# Check system architecture and setup Homebrew paths
+if [[ "$(uname -m)" == 'arm64' ]]; then
+    # Check if Homebrew is installed in the M1 default location
+    if [[ -f "/opt/homebrew/bin/brew" ]]; then
+        # Setup Homebrew environment
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+        echo "✅ Homebrew environment configured for Apple Silicon"
+    else
+        echo "❌ Homebrew not found in /opt/homebrew/bin" >&2
+    fi
+elif [[ "$(uname -m)" == 'x86_64' ]]; then
+    # Intel Mac path
+    if [[ -f "/usr/local/bin/brew" ]]; then
+        eval "$(/usr/local/bin/brew shellenv)"
+        echo "✅ Homebrew environment configured for Intel Mac"
+    else
+        echo "❌ Homebrew not found in /usr/local/bin" >&2
+    fi
 fi
