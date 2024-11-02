@@ -20,6 +20,8 @@ brew "kotlin"
 brew "mas"
 # Java-based project management
 brew "maven"
+# Robust (fully ACID) transactional property graph database
+brew "neo4j"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Python version management
@@ -60,8 +62,6 @@ cask "microsoft-office"
 cask "microsoft-teams"
 # Minimal installer for conda
 cask "miniconda"
-# Developer IDE or Management Environment for Neo4j instances
-cask "neo4j"
 # Get up and running with large language models locally
 cask "ollama"
 # Desktop virtualization software
@@ -95,9 +95,9 @@ mas "Keynote", id: 409183694
 mas "Kindle", id: 302584613
 mas "Microsoft To Do", id: 1274495053
 vscode "esbenp.prettier-vscode"
-vscode "ginfuru.ginfuru-vscode-jekyll-syntax"
 vscode "github.copilot"
 vscode "github.copilot-chat"
+vscode "github.github-vscode-theme"
 vscode "github.remotehub"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
@@ -114,6 +114,5 @@ vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-repositories"
 vscode "naumovs.color-highlight"
 vscode "orta.vscode-jest"
-vscode "pkief.material-icon-theme"
 vscode "ritwickdey.liveserver"
 vscode "vscjava.vscode-gradle"
