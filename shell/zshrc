@@ -54,10 +54,20 @@ export GOPATH="$HOME/go"
 
 # Python (pyenv)
 export PYENV_ROOT="$HOME/.pyenv"
-if [[ -d "$PYENV_ROOT/bin" ]]; then
+# Python (pyenv)
+if command -v pyenv >/dev/null; then
+    # Set PYENV_ROOT and add to PATH
+    export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
+    
+    # Initialize pyenv
+    eval "$(pyenv init --path)"
     eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)" 2>/dev/null
+    
+    # Initialize virtualenv if available
+    if command -v pyenv-virtualenv-init >/dev/null; then
+        eval "$(pyenv virtualenv-init -)"
+    fi
 fi
 
 # Ruby (chruby)
