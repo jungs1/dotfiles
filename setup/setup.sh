@@ -57,4 +57,24 @@ for plugin in "${plugins[@]}"; do
     install_plugin "$repo" "$dir"
 done
 
+# Enable "Tap to click" for trackpad
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Disable trackpad Natural scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+# Remove all current docked apps
+defaults write com.apple.dock persistent-apps -array
+
+# Enable auto hide on dock
+defaults write com.apple.dock autohide -bool true
+
+# Modify dock to be on the left screen
+defaults write com.apple.dock orientation -string "left"
+
+# Restart Dock to apply changes
+killall Dock
+
 echo "${GREEN}\n<<< Finished plugins Setup >>>\n${NC}"
