@@ -1,7 +1,5 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
 # Modern, maintained replacement for ls
 brew "eza"
 # Distributed revision control system
@@ -28,8 +26,6 @@ brew "pmd"
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.12"
 # Contract-oriented programming language
 brew "solidity"
 # Terminal multiplexer
@@ -48,14 +44,10 @@ cask "firefox"
 cask "iina"
 # IDE for Java development - community edition
 cask "intellij-idea-ce"
-# Tool to prevent the system from going into sleep mode
-cask "keepingyouawake"
-# Blocks all Keyboard and TouchBar input
-cask "keyboardcleantool"
 # Wallet desktop application to maintain multiple cryptocurrencies
 cask "ledger-live"
 # Software for Logitech devices
-cask "logitech-options"
+cask "logi-options+"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
 # Provides updates to various Microsoft products
@@ -68,18 +60,16 @@ cask "microsoft-teams"
 cask "miniconda"
 # Get up and running with large language models locally
 cask "ollama"
-# Desktop virtualization software
-cask "parallels"
-# Administration and development platform for PostgreSQL
-cask "pgadmin4"
 # Client for Proton Drive
 cask "proton-drive"
+# Client for Proton Mail and Proton Calendar
+cask "proton-mail"
 # Desktop client for Proton Pass
 cask "proton-pass"
 # VPN client focusing on security
 cask "protonvpn"
-# JDK from the Eclipse Foundation (Adoptium)
-cask "temurin@11"
+# System monitor for the menu bar
+cask "stats"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin@17"
 # JDK from the Eclipse Foundation (Adoptium)
@@ -92,10 +82,14 @@ cask "visual-studio-code"
 cask "zoom"
 # Collect, organise, cite, and share research sources
 cask "zotero"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
 mas "KakaoTalk", id: 869223134
 mas "Keynote", id: 409183694
 mas "Kindle", id: 302584613
-vscode "amodio.tsl-problem-matcher"
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+vscode "alexcvzz.vscode-sqlite"
 vscode "bradlc.vscode-tailwindcss"
 vscode "dbaeumer.vscode-eslint"
 vscode "esbenp.prettier-vscode"
