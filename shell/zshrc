@@ -20,9 +20,6 @@ if [[ -d "$PLUGIN_DIR" ]]; then
     plugins=(
         "zsh-autosuggestions/zsh-autosuggestions.zsh"
         "zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-        "fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
-        "zsh-history-substring-search/zsh-history-substring-search.zsh"
-        "zsh-completions/zsh-completions.plugin.zsh"
     )
 
     for plugin in "${plugins[@]}"; do
@@ -83,6 +80,9 @@ if [[ -d "$NVM_DIR" ]]; then
     [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
 fi
 
+# Cargo Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # =============================================================================
 #  Package Management
 # =============================================================================
@@ -96,12 +96,6 @@ export HOMEBREW_NO_ENV_HINTS=1
 #  Shell Configuration
 # =============================================================================
 
-# History
-HISTFILE="$HOME/.zsh_history"
-setopt EXTENDED_HISTORY
-setopt HIST_VERIFY
-setopt HIST_IGNORE_DUPS
-setopt SHARE_HISTORY
 
 #  Performance Optimization
 # =============================================================================
