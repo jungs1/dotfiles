@@ -40,10 +40,14 @@ cask "anki"
 cask "docker"
 # Web browser
 cask "firefox"
+# Web browser
+cask "google-chrome"
 # Free and open-source media player
 cask "iina"
 # IDE for Java development - community edition
 cask "intellij-idea-ce"
+# Desktop shield and keystroke interceptor
+cask "keyboard-cleaner"
 # Wallet desktop application to maintain multiple cryptocurrencies
 cask "ledger-live"
 # Software for Logitech devices
